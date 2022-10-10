@@ -28,19 +28,20 @@
 
 :root {
   font-size: 16px;
-  --gray30: #212121;
-  --gray20: #212429;
+  --gray40: #212121;
+  --gray30: #212429;
+  --gray20: #424242;
   --gray10: #616161;
 }
 
 body {
-  color: var(--gray30);
+  color: var(--gray40);
   font-family: 'Roboto', sans-serif;
   /*font-family: charter;*/
 }
 
 a {
-  color: var(--gray30);
+  color: var(--gray40);
 }
 
 header {
@@ -53,7 +54,7 @@ header a {
   text-decoration: none;
 }
 header a:hover {
-  color:var(--gray30);
+  color:var(--gray40);
 }
 
 nav details summary {
@@ -79,4 +80,24 @@ pre {
 .hero {
   background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png');
   height: 350px;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList);
+}
+
+.section-content h3::after {
+  content: '';
+  width: 32px;
+  height: 4px;
+  background: var(--gray20);
+  display: inline-block;
 }
