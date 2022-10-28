@@ -47,13 +47,23 @@ a {
   color: var(--white40);
 }
 
+.header {
+
+}
+
+.header-content {
+  padding-inline: 20px;
+}
+
 header {
+  margin-block-start: 20px;
   font-size: 14px;
   color: var(--white40);
 }
 
 header li {
   color: var(--white30);
+  margin-block-end: 16px;
 }
 
 header a {
@@ -69,8 +79,8 @@ nav details summary {
 }
 
 h1 {
-  font-size: 60px;
-  margin-block-start: 64px;
+  font-size: 40px;
+  margin-block-start: 20px;
   margin-block-end: 16px;
 }
 
@@ -98,6 +108,10 @@ pre {
   padding-block-end: 40px;
   overflow: auto;
   border-radius: 8px;
+  border: 8px solid #5551FF;
+  box-shadow: -10px 10px 0 0 #ABAAF6;
+  margin-block-end: 30px;
+  border-start-start-radius: 8px;
 }
 
 p {
@@ -107,7 +121,7 @@ p {
 .hero {
   background-image: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
   /*background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png');*/
-  height: 350px;
+  block-size: 50px;
 }
 
 .section-content img {
@@ -170,4 +184,93 @@ blockquote p {
 .main-content {
   /* border: 1px solid blue; */
   padding-inline: 16px;
+}
+
+.slider {
+  /* border: 1px solid red; */
+}
+
+.slider-container {
+  /* block-size: 100px; */
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+  /* border: 1px solid purple; */
+}
+
+.video {
+  margin: 0;
+  /* border: 1px solid blue; */
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  /* border: 1px solid yellow; */
+  text-align: center;
+  margin-block-start: 10px;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.form input {
+  width: 100%;
+  border: 1px solid var(--white40);
+  background: #251F24;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--white40);
+  font-size: 16px;
+  display: block;
+  margin-block-end: 24px;
+}
+
+.form input[type="submit"] {
+  background: #157EFB;
+  border: none;
+}
+
+.form input::-webkit-input-placeholder {
+  color: var(--white30);
+}
+
+@media screen and (min-width: 1366px) {
+  .hero {
+    block-size: 350px;
+  }
+
+  .header {
+      position: sticky;
+      inset-block-start: -45px;
+      padding-inline: 0;
+    }
+
+    .header-content {
+      position: relative;
+      inset-block-start: 65px;
+    }
+
+    header {
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-start: -208px;
+      inline-size: 188px;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-block-start: 64px;
+    }
 }
