@@ -247,6 +247,7 @@ blockquote p {
 }
 
 @media screen and (min-width: 1366px) {
+
   .hero {
     block-size: 350px;
   }
@@ -254,12 +255,12 @@ blockquote p {
   .header {
       position: sticky;
       inset-block-start: -45px;
-      padding-inline: 0;
     }
 
-    .header-content {
+  .header-content {
       position: relative;
       inset-block-start: 65px;
+      padding-inline: 0;
     }
 
     header {
