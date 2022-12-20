@@ -28,10 +28,10 @@
 
 :root {
   font-size: 16px;
-  --gray40: #212121;
-  --gray30: #212429;
-  --gray20: #424242;
-  --gray10: #616161;
+    --gray40: #212121;
+    --gray30: #212429;
+    --gray20: #424242;
+    --gray10: #616161;
 }
 
 html {
@@ -97,6 +97,7 @@ h3 {
   margin-top: 16px;
   margin-bottom: 24px;
   font-weight: normal;
+  position: relative;
 }
 
 pre {
@@ -197,4 +198,65 @@ blockquote span::before {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+.slider {
+  /* border: 1px solid red; */
+}
+
+.slider-container {
+  /* block-size: 100px; */
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+  /* border: 1px solid purple; */
+}
+
+.video {
+  margin: 0;
+  /* border: 1px solid blue; */
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  /* border: 1px solid yellow; */
+  text-align: center;
+  margin-block-start: 10px;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.form input {
+  width: 100%;
+  border: 1px solid var(--gray10);
+  background: white;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--white40);
+  font-size: 16px;
+  display: block;
+  margin-block-end: 24px;
+}
+
+.form input[type="submit"] {
+  background: #000000;
+  color: white;
+  border: none;
+}
+
+.form input::-webkit-input-placeholder {
+  color: var(--gray20);
 }
